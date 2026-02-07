@@ -35,7 +35,7 @@ export default function RootLayout({ children }) {
           {/*footer*/}
           <footer className="bg-muted/50 py-12">
             <div className="container mx-auto px-4 text-center text-gray-200">
-              <p>footer</p>
+              <p>© 2024 Senpai AI Career Coach. All rights reserved.</p>
             </div>
           </footer>
         </ThemeProvider>
