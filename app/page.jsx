@@ -11,10 +11,9 @@ import {
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "@/components/ui/accordion"
+} from "@/components/ui/accordion";
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
-
 
 export default function Home() {
   return (
@@ -102,7 +101,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="w-full py-12 md:py-24 lg:py-32 bg-background">
+      <section className="w-full py-12 md:py-24 lg:py-32 bg-muted/50">
         <div className="container mx-auto px-4 md:px-6">
           <h2 className="text-3xl font-bold tracking-tighter text-center mb-12">
             What Our Users Say
@@ -169,9 +168,7 @@ export default function Home() {
                 return (
                   <AccordionItem key={index} value={`item-${index}`}>
                     <AccordionTrigger>{faqs.question}</AccordionTrigger>
-                    <AccordionContent>
-                   {faqs.answer}
-                    </AccordionContent>
+                    <AccordionContent>{faqs.answer}</AccordionContent>
                   </AccordionItem>
                 );
               })}
@@ -187,22 +184,22 @@ export default function Home() {
               Ready to Accelerate Your Career?
             </h2>
             <p className="mx-auto max-w-[600px] text-primary-foreground/80  md:text-xl">
-              Join thousand of  professional who are advancing their careers with AI-powered guidence.
+              Join thousand of professional who are advancing their careers with
+              AI-powered guidence.
             </p>
             <Link href="/dashboard" passHref>
-            <Button
-            size="lg"
-            variant="secondary"
-            className="h-11 mt-5 animate-bounce"
-            >
-              Start Your Journey Today<ArrowRight className="ml-2 h-4 w-4"/>
-            </Button>
+              <Button
+                size="lg"
+                variant="secondary"
+                className="h-11 mt-5 animate-bounce"
+              >
+                Start Your Journey Today
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
             </Link>
           </div>
-         
         </div>
       </section>
-
     </div>
   );
 }
